@@ -49,14 +49,17 @@ def cappuccino():
         resource_report["Water"] = resource_report["Water"] - 250
     else:
         print("Not enough water to continue, goodbye")
+        quit()
     if resource_report["Coffee"] >= 24:
         resource_report["Coffee"] = resource_report["Coffee"] - 24
     else:
         print("Not enough coffee to continue, goodbye")
+        quit()
     if resource_report["Milk"] >= 100:
         resource_report["Milk"] = resource_report["Milk"] - 100
     else:
         print("Not enough milk to continue, goodbye")
+        quit()
     print(resource_report)
 
 
@@ -115,6 +118,8 @@ def coffee_choice():
             """)
             print(f"Your change is {total_inserted - drink_cost[choice1]}")
             coffee_choice()
+        else:
+            pass
 
 
 coffee_choice()
